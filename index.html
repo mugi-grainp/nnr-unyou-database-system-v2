@@ -6,41 +6,49 @@
         <meta name="description" content="鉄道,西鉄,西日本鉄道,西鉄電車,車両運用">
         <meta name="author" content="青竹">
         <title>西鉄電車 車両運用データベース</title>
-        <style>
-            .search_field { font-size: x-large; }
-            #submit { font-size: x-large; }
-        </style>
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <h1>西鉄電車 車両運用データベース</h1>
-        <p style="font-size: x-large; color: red;"><del>2020/08/01 再始動</del>2021/04/01までになんとかします</p>
-        <p>西鉄電車 (西日本鉄道) の車両運用について、データを検索できるサイトです。</p>
-        <h2>注釈</h2>
-        <ul>
-            <li>併結編成の表記は、左側を福岡(天神)方、右側を大牟田方としています。</li>
-            <li>列車番号が不明な時は、列車を区別する情報を代わりに記載します。</li>
-        </ul>
-        <h2>検索</h2>
-        <p>編成番号・列車番号ともに空欄で「検索」ボタンを押すと、指定した日の全情報を表示します。</p>
-        <form action="result.cgi" method="GET">
-            <p>
-                <label for="search_date">日　　付</label>
-                <input id="search_date" class="search_field" type="date" size="30" required>
-            </p>
-            <p>
-                <label for="search_formation_number">編成番号</label>
-                <input id="search_formation_number" class="search_field" type="text" size="30">
-            </p>
-            <p>
-                <label for="search_train_number">列車番号</label>
-                <input id="search_train_number" class="search_field" type="text" size="30">
-            </p>
-            <p>
-                <input id="submit" type="submit" value="検索">
-            </p>
-        </form>
-        <hr>
+        <header>
+            <h1>西鉄電車 車両運用データベース</h1>
+            <p style="font-size: x-large; color: red;"><del>2020/08/01 再始動</del>2021/04/01までになんとかします</p>
+            <p>西鉄電車 (西日本鉄道) の車両運用について、データを検索できるサイトです。</p>
+        </header>
+        <main>
+            <div id="info_and_query_area">
+                <h2>注釈</h2>
+                <ul>
+                    <li>併結編成の表記は、左側を福岡(天神)方、右側を大牟田方としています。</li>
+                    <li>列車番号が不明な時は、列車を区別する情報を代わりに記載します。</li>
+                </ul>
+                <h2>検索</h2>
+                <p>編成番号・列車番号ともに空欄で「検索」ボタンを押すと、指定した日の全情報を表示します。</p>
+                <form>
+                    <p>
+                        <label for="search_date">日　　付</label>
+                        <input id="search_date" class="search_field" type="date" size="30" required>
+                    </p>
+                    <p>
+                        <label for="search_formation_number">編成番号</label>
+                        <input id="search_formation_number" class="search_field" type="text" size="30">
+                    </p>
+                    <p>
+                        <label for="search_train_number">列車番号</label>
+                        <input id="search_train_number" class="search_field" type="text" size="30">
+                    </p>
+                    <p>
+                        <input id="search" type="button" value="検索">
+                    </p>
+                </form>
+            </div>
+            <div id="result_area">
+                <h2>検索結果</h2>
+                <textarea id="resultbox">
+                </textarea>
+            </div>
+        </main>
         <footer>
+            <hr>
             <p>管理担当：青竹</p>
         </footer>
     </body>

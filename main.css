@@ -1,0 +1,12 @@
+div {
+    float: left;
+    margin: 0px 15px;
+    max-width: 50%;
+}
+
+footer {
+    clear: both;
+}
+.search_field { font-size: x-large; }
+
+#search { font-size: x-large; }
